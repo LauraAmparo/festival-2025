@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url(./fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+
+:root {
+    --font-primary: 'Poppins-Bold';
+    --font-secundary: 'Poppins-Regular';
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../assets/2236542f-8be9-4b68-82f3-604964bdf765.jpg);
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+body,
+input,
+button,
+table {
+    font-size: 14px;
+    font-family: var(--font-primary);
+}
+
+
+
+button {
+    cursor: pointer;
+}
+
+/* estilos */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+}
+
+.logo {
+    width: 133px;
+    height: 44px;
+    flex-shrink: 0;
+    aspect-ratio: 133/44;
+
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 0.5px solid #FFF;
+    color: #FFF;
+
+    font-family: var(--font-secundary);
+    font-size: 18px;
+    font-style: normal;
+
+    line-height: normal;
+    padding-bottom: 10px;
+    gap: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background: transparent;
+
+
+}
+
+.boton a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.contenedor__h1 {
+
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-secundary);
+    font-size: clamp(1rem, 3rem, 7rem);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100px;
+    /* 117.647% */
+    letter-spacing: -1.7px;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor p {
+    color: #ADADAD;
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 171.429% */
+
+}
+
+.contenedor a {
+    display: flex;
+    -ms-flex-align: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 60px;
+    border: 1px solid;
+    background: #0CAEA5;
+    text-decoration: none;
+    padding: 20px;
+    color: #FFF;
+    font-family: var(--font-primary);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 123.5%;
+    /* 37.05px */
+}
+
+/* .imagen img{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+} */
+
+.cartel {
+    width: 464px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.reloj {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.reloj p {
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-secundary);
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+h5 {
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.separador {
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700px;
+    line-height: normal;
+
+}
+
+
+
+
+main {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #676C6C;
+    font-family: var(--font-secundary);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    padding: 1rem 4rem;
+
+
+}
+
+.footer__redes {
+    display: flex;
+    justify-content: end;
+    text-align: end;
+
+
+}
+
+/* Modal */
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 150px;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../assets/2236542f-8be9-4b68-82f3-604964bdf765.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+}
+
+.show {
+    display: block !important;
+}
+
+#modal {
+    display: none;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    padding: 5rem 1rem;
+}
+
+.form__input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#email_contact {
+    height: 3rem;
+    width: 100%;
+    border-radius: 0px;
+    border: 1px solid #FFF;
+    background: rgba(255, 255, 255, 0.10);
+}
+
+#email_contact::placeholder {
+    font-family: var(--font-secundary);
+    padding-left: 1rem;
+    color: #ADADAD;
+}
+
+#submit {
+    background-color: #0CAEA5;
+    display: flex;
+    gap: 1rem;
+    height: 50px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 0px 2em;
+    border: 0px;
+}
+
+.legal {
+    font-family: var(--font-secundary);
+    font-size: .8rem;
+}
+
+.legal__a {
+    color: #0CAEA5;
+    text-decoration: none;
+}
+
+/* Rsponsive */
+
+
+@media screen and (max-width:1200px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .image {
+        width: 100%;
+
+        padding: 0 20px;
+    }
+
+    .cartel {
+        width: 100%;
+        height: auto;
+    }
+
+    .reloj {
+        width: 50%;
+        gap: 20px;
+
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 05rem 2rem;
+
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        /* width: 80%; */
+    }
+
+    .contenedor {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+ 
+    .reloj {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    
+    }
+    
+    .reloj p {
+        color: #FFF;
+        text-align: center;
+        font-family: var(--font-secundary);
+        font-size: 30px;
+        
+        font-weight: 350;
+        
+    
+    }
+
+  
+
+}
+    
+
+
